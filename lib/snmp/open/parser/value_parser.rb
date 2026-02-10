@@ -81,7 +81,7 @@ module SNMP
 
             # consume tokens through one like 23:59:59.99
             loop do
-              break if tokens.next =~ /\A\d\d:\d\d:\d\d.\d\d\z/
+              break if tokens.next =~ /\A\d?\d:\d\d:\d\d.\d\d\z/
             end
 
             @parse = [@type, ticks]
